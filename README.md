@@ -47,7 +47,7 @@ git remote set-url origin https://github.com/<user-name>/my-project.git
 - 将代码推送到你的新仓库：
 
 ```bash
-git push -u origin master
+git push -u origin main
 ```
 
 ### 配置

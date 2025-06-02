@@ -275,7 +275,7 @@ cd /home/github/actions-runner
 
 在 `.github/workflows` 目录中已经有配置好的 GitHub Action 工作流用于部署到环境（带有标签的 GitHub Actions 运行器）：
 
-* `staging`：推送（或合并）到 `master` 分支后。
+* `staging`：推送（或合并）到 `main` 分支后。
 * `production`：发布版本后。
 
 如果你需要添加额外的环境，你可以使用这些作为起点。
