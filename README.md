@@ -118,8 +118,8 @@ docker compose up -d db
 
 ```
 fastapi-template/
-├── backend/                 # FastAPI application
-│   ├── app/                # Application code
+├── backend/               # FastAPI application
+│   ├── app/               # Application code
 │   │   ├── api/           # API routes
 │   │   ├── core/          # Configuration & utilities
 │   │   ├── crud/          # Database operations
@@ -217,3 +217,38 @@ If you encounter any issues:
 ---
 
 **Happy coding! 🚀**
+
+## 🙏 Acknowledgments
+
+This project is based on the excellent [FastAPI Full Stack Template](https://github.com/fastapi/full-stack-fastapi-template) by the FastAPI team. We've adapted and streamlined it with:
+
+- **Simplified setup** - One-command environment initialization
+- **Modern tooling** - UV package manager and Ruff linter
+- **Enhanced developer experience** - Pre-configured VSCode and automated workflows
+- **Streamlined architecture** - Focused on backend API development
+
+### Original Template Features Retained:
+- 🔐 JWT authentication system
+- 🗄️ PostgreSQL with SQLAlchemy 2.0
+- 📋 Alembic database migrations
+- 🐳 Docker containerization
+- 🧪 Pytest test framework
+- 📚 Interactive API documentation
+
+### Key Differences from Original:
+- **Removed frontend** - Backend-focused template
+- **UV instead of Poetry** - Faster dependency management
+- **Ruff instead of multiple tools** - Unified linting and formatting
+- **Automated setup** - Single script for complete environment setup
+- **Enhanced pre-commit hooks** - More comprehensive code quality checks
+
+## 📖 Related Resources
+
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Original Full Stack Template](https://github.com/fastapi/full-stack-fastapi-template)
+- [UV Package Manager](https://github.com/astral-sh/uv)
+- [Ruff Linter](https://github.com/astral-sh/ruff)
+
+---
+
+**Built with ❤️ based on FastAPI Full Stack Template**
