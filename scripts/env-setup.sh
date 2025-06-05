@@ -52,7 +52,8 @@ if [ ! -d .vscode ]; then
     "charliermarsh.ruff",
     "ms-python.mypy-type-checker",
     "ms-azuretools.vscode-docker",
-    "humao.rest-client"
+    "humao.rest-client",
+    "vivaxy.vscode-conventional-commits"
   ]
 }
 EOF
