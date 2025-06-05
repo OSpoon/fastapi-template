@@ -34,6 +34,7 @@ echo "✅ Backend dependencies installed"
 # 安装 pre-commit
 echo "🔧 Installing pre-commit hooks..."
 uv run pre-commit install
+uv run pre-commit install --hook-type commit-msg
 echo "✅ Pre-commit hooks installed"
 
 cd ..

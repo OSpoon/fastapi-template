@@ -22,6 +22,11 @@ repos:
         args:
           - --fix
       - id: ruff-format
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.18.4
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
 
 ci:
   autofix_commit_msg: 🎨 [pre-commit.ci] Auto format from pre-commit.com hooks
