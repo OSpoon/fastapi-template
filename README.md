@@ -223,7 +223,6 @@ If you encounter any issues:
 This project is based on the excellent [FastAPI Full Stack Template](https://github.com/fastapi/full-stack-fastapi-template) by the FastAPI team. We've adapted and streamlined it with:
 
 - **Simplified setup** - One-command environment initialization
-- **Modern tooling** - UV package manager and Ruff linter
 - **Enhanced developer experience** - Pre-configured VSCode and automated workflows
 - **Streamlined architecture** - Focused on backend API development
 
@@ -237,10 +236,7 @@ This project is based on the excellent [FastAPI Full Stack Template](https://git
 
 ### Key Differences from Original:
 - **Removed frontend** - Backend-focused template
-- **UV instead of Poetry** - Faster dependency management
-- **Ruff instead of multiple tools** - Unified linting and formatting
 - **Automated setup** - Single script for complete environment setup
-- **Enhanced pre-commit hooks** - More comprehensive code quality checks
 
 ## 📖 Related Resources
 
