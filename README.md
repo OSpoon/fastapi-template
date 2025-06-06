@@ -35,7 +35,6 @@ The setup script will automatically:
 - ✅ Install all dependencies
 - ✅ Setup pre-commit hooks
 - ✅ Configure VSCode with optimal settings
-- ✅ Run initial code quality checks
 
 ### Environment Configuration
 

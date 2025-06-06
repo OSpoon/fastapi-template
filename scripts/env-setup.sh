@@ -88,18 +88,31 @@ EOF
   }
 }
 EOF
+
+# 创建调试配置
+    cat > .vscode/launch.json << 'EOF'
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug FastAPI Project backend: Python Debugger",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "app.main:app",
+                "--reload"
+            ],
+            "cwd": "${workspaceFolder}/backend",
+            "jinja": true,
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
+EOF
+
     echo "✅ VSCode configuration created"
 fi
-
-# 代码质量检查
-echo "🔍 Running initial code quality checks..."
-cd backend
-if uv run pre-commit run --all-files; then
-    echo "✅ All pre-commit checks passed"
-else
-    echo "⚠️  Some pre-commit checks failed. Please review and fix the issues."
-fi
-cd ..
 
 echo ""
 echo "🎉 Environment setup complete!"
