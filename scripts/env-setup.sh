@@ -7,14 +7,14 @@ echo "🚀 Setting up development environment..."
 # 检测操作系统
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
     IS_WINDOWS=true
-    VENV_PYTHON="./backend/.venv/Scripts/python"
-    VENV_RUFF="./backend/.venv/Scripts/ruff"
-    VENV_MYPY="./backend/.venv/Scripts/mypy"
+    VENV_PYTHON="backend/.venv/Scripts/python"
+    VENV_RUFF="backend/.venv/Scripts/ruff"
+    VENV_MYPY="backend/.venv/Scripts/mypy"
 else
     IS_WINDOWS=false
-    VENV_PYTHON="./backend/.venv/bin/python"
-    VENV_RUFF="./backend/.venv/bin/ruff"
-    VENV_MYPY="./backend/.venv/bin/mypy"
+    VENV_PYTHON="backend/.venv/bin/python"
+    VENV_RUFF="backend/.venv/bin/ruff"
+    VENV_MYPY="backend/.venv/bin/mypy"
 fi
 
 echo "🖥️  Detected OS: $(if $IS_WINDOWS; then echo "Windows"; else echo "Unix-like"; fi)"
@@ -62,12 +62,12 @@ EOF
     # 创建 Python 解释器配置（根据操作系统设置路径）
     cat > .vscode/settings.json << EOF
 {
-  "python.defaultInterpreterPath": "$VENV_PYTHON",
+  "python.defaultInterpreterPath": "\${workspaceFolder}/$VENV_PYTHON",
   "python.terminal.activateEnvironment": true,
-  "ruff.path": ["$VENV_RUFF"],
+  "ruff.path": ["\${workspaceFolder}/$VENV_RUFF"],
   "ruff.fixAll": true,
   "ruff.organizeImports": true,
-  "mypy-type-checker.path": ["$VENV_MYPY"],
+  "mypy-type-checker.path": ["\${workspaceFolder}/$VENV_MYPY"],
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "python.analysis.typeCheckingMode": "off",
   "python.linting.enabled": false,
